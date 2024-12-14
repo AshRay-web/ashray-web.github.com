@@ -8,9 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
+    <script src="planet.js"></script>4
+    <script src="starry-background,js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
 
 </head>
 <body>
+
+
+
+    <div class="starry-bg"></div>
+
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
@@ -19,14 +30,33 @@
             <li><a href="#courses">Courses</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <!-- Cool icon addition -->
+        <div class="cool-icon">
+            <i class="fa-solid fa-atom"></i>
+            <span>Explore</span>
+        </div>
     </nav>
     
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-    </header>
-
+    <section id="welcome">
+        <div class="welcome-container">
+            <div class="welcome-text">
+                <h1>Hello, I'm <span class="highlight">Aasharya</span></h1>
+                <p>
+                    A physics student at Tribhuvan University with a passion for <br>
+                    <strong>physics</strong>, <strong>biology</strong>,play with<br>
+                    <strong>computer science</strong> to explore these fields.
+                </p>
+            </div>
+            <div class="physics-animation">
+                <div class="particle orbit"></div>
+                <div class="particle orbit"></div>
+                <div class="particle orbit"></div>
+            </div>
+        </div>
+    </section>
+    
+    
     <section id="about">
-        
         <h2 class="about-heading">About Me</h2>
         <h1 class="background-text">ABOUT</h1>
         <div class="about-container">
@@ -43,10 +73,10 @@
                     <li class="tags"><span class="label">Email:</span> <span class="value">Bhandariaasharya@gmail.com</span></li>
                     <li class="tags"><span class="label">Phone:</span> <span class="value">+977 9843221804</span></li>
                 </ul>
-                <p>Biology, I judged you too quickly.</p>
+                <p class="quote">"Biology, I judged you too quickly."</p>
                 <div class="text">
                     <p class="cv">
-                        <span class="number" data-number="20">5</span>
+                        <span class="number" id="projects-completed">0</span>
                         <span>Projects completed</span>
                     </p>
                     <p><a href="aasharya(cv).pdf" class="cv-link">Download CV</a></p>
@@ -54,6 +84,7 @@
             </div>
         </div>
     </section>
+    
       
 
 
@@ -109,16 +140,41 @@
         <h2 class="courses-heading">Recent Courses</h2>
         <h1 class="background-text">COURSES</h1>
         <div class="courses-grid">
-            <div class="course-box">Python for Data Science</div>
-            <div class="course-box">Introduction to Deep Learning</div>
-            <div class="course-box">Medical Imaging Analysis</div>
-            <div class="course-box">Stochastic Processes in Biophysics</div>
-            <div class="course-box">Python for Data Science</div>
-            <div class="course-box">Introduction to Deep Learning</div>
-            <div class="course-box">Medical Imaging Analysis</div>
-            <div class="course-box">Stochastic Processes in Biophysics</div>
+            <div class="course-box">
+                <i class="fas fa-laptop-code"></i> <!-- Icon -->
+                  Python for Data Science
+            </div>
+            <div class="course-box">
+                <i class="fas fa-brain"></i> <!-- Icon -->
+                  Introduction to Deep Learning
+            </div>
+            <div class="course-box">
+                <i class="fas fa-microscope"></i> <!-- Icon -->
+                  Medical Imaging Analysis
+            </div>
+            <div class="course-box">
+                <i class="fas fa-dna"></i> <!-- Icon -->
+                  Stochastic Processes in Biophysics
+            </div>
+            <div class="course-box">
+                <i class="fas fa-laptop-code"></i> <!-- Icon -->
+                  Python for Data Science
+            </div>
+            <div class="course-box">
+                <i class="fas fa-brain"></i> <!-- Icon -->
+                  Introduction to Deep Learning
+            </div>
+            <div class="course-box">
+                <i class="fas fa-microscope"></i> <!-- Icon -->
+                  Medical Imaging Analysis
+            </div>
+            <div class="course-box">
+                <i class="fas fa-dna"></i> <!-- Icon -->
+                  Stochastic Processes in Biophysics
+            </div>
         </div>
     </section>
+    
     
     <section id="blogs">
     <h2 class="blogs-heading">Blogs</h2>
