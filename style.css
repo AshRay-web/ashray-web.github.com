@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0px;
     font-family: "Poppins", sans-serif;
@@ -5,7 +11,39 @@ body {
     line-height: 1.8;
     font-weight: 400;
     color: #000000;
+    overflow: auto;
 }
+
+.starry-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1; /* Place it behind everything */
+
+
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8); /* White stars with slight transparency */
+    border-radius: 50%;
+    animation: twinkle 5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
 header {
     background:#000000;
     color: #fff;
@@ -46,6 +84,7 @@ h2{
     font-family: 'Poppins', sans-serif; ;
     color: #ffffff;
 }
+
 
 /* Navigation Bar */
 .navbar {
@@ -102,100 +141,310 @@ h2{
     width: 100%; /* Full width underline on hover */
 }
 
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Align navigation to the right */
+    align-items: center;
+    padding: 10px 20px;
+    background: black;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #cfcfcf;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffbd39;
+}
+
+/* Add a cool physics-inspired icon to the navigation */
+.cool-icon {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.cool-icon i {
+    font-size: 1.5rem;
+    color: #ffbd39;
+    animation: spin 2s linear infinite;
+}
+
+.cool-icon:hover i {
+    animation: none;
+    color: #cfcfcf;
+}
+
+.cool-icon span {
+    font-family: 'Poppins', sans-serif;
+    color: #cfcfcf;
+    font-size: 1rem;
+}
+
+/* Spinning Animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
+/* Welcome Section */
+#welcome {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: black; /* Matches the overall black theme */
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
 
+.welcome-container {
+    position: relative;
+    z-index: 3; /* Ensures it's above the stars */
+}
 
+.welcome-text h1 {
+    font-size: 3rem;
+    margin: 0 0 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffbd39; /* Golden yellow highlight */
+    text-shadow: 0 0 15px rgba(255, 189, 57, 0.7);
+    animation: fadeInDown 2s ease-out;
+}
 
+.welcome-text p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #cfcfcf;
+    line-height: 1.5;
+    animation: fadeInUp 2s ease-out;
+}
 
+.welcome-text .highlight {
+    color: #ffbd39;
+    font-weight: bold;
+}
 
+.physics-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+}
+
+.particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #ffbd39;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbit 4s linear infinite;
+}
+
+.particle:nth-child(1) {
+    width: 5px;
+    height: 5px;
+    animation-duration: 3s;
+}
+
+.particle:nth-child(2) {
+    width: 7px;
+    height: 7px;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+.particle:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
 
 #about {
+    align-content: center;
     margin: 0px;
-    padding: 40px;
+    padding: 50px 20px;
     background: #000000;
     text-align: center;
 }
 
+.about-heading {
+    font-size: 4vw;
+    margin-bottom: 30px;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #ffbd39; /* Golden heading color */
+}
 
 .about-container {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center; /* Vertically center align */
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 900px;
+    max-width: 1100px; /* Increase overall container width */
     margin: 0 auto;
 }
 
 .about-image img {
-    width: 200px;
-    height: 220px;
-    border-radius: 0%; /* Make the image circular */
+    width: 300px; /* Bigger image size */
+    height: 400px;
+    border-radius: 0px; /* Add slight rounding */
     object-fit: cover;
-    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 10px; /* Add shadow */
+}
+
+.about-text {
+    flex: 1; /* Take equal width */
+    padding-left: 20px;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.4;
+    font-size: 16px;
 }
 
 .about-text ul {
     list-style: none; /* Remove bullet points */
     padding: 0;
     margin: 0;
-    text-align: left;
+    font-size: 18px;
 }
 
 .about-text ul li {
     margin: 10px 0;
-    font-size: 18px; /* Bigger font size */
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .about-text .label {
-    color: #ffffff; /* Slightly whiter for labels */
+    color: #ffffff; /* White for labels */
     font-weight: bold;
 }
 
 .about-text .value {
-    padding: 8px;
-    color: #808080;
-    font-size: medium; /* Grayish color for values */
+    color: #808080; /* Grayish color for values */
+    font-size: medium;
 }
 
-.about h2 {
-    font-family: 'Poppins', sans-serif; 
-    font-size: 20px; 
-    font-weight: 600;
-    color: #ffffff; 
-    line-height: 1.6;
-    text-align: left; 
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+.quote {
+    font-style: italic;
+    font-size: 1rem;
+    margin: 20px 0;
+    color: #ffbd39; /* Golden for the quote */
+}
+
+.text {
     margin-top: 20px;
-    letter-spacing: 0.5px; 
 }
 
-/* CV Link */
-.cv-link {
-    color: #007bff;
-    text-decoration: none;
+.cv {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#projects-completed {
+    font-size: 2rem;
     font-weight: bold;
+    color: #ffbd39; /* Golden */
+}
+
+.cv-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ffbd39; /* Golden button */
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .cv-link:hover {
-    text-decoration: underline;
+    background: #ffffff; /* White hover effect */
+    color: #000;
+    transform: scale(1.1);
 }
 
-/* Projects Completed */
-.cv .number {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-}
-
-.cv span {
-    display: block;
-    font-size: 18px;
-    color: #555;
-}
 
 /* Project Section */
 #projects {
@@ -348,10 +597,19 @@ html {
     position: relative; /* For positioning hover effects */
     overflow: hidden; /* Ensure content doesn't overflow */
 }
-
+.course-box i {
+    font-size: 2.5rem; /* Icon size */
+    color: #ffbd39; /* Golden icon color */
+    margin-bottom: 10px; /* Space between icon and text */
+    transition: transform 0.3s ease; /* Smooth animation */
+}
+.course-box:hover i {
+    transform: scale(1.2); /* Enlarge icon slightly on hover */
+    color: #000; /* Change to black when hovering */
+}
 
 .course-box:hover {
-    color: #000; /* Black text on hover */
+    color: #000; /* Change text to black */
     background: #ffbd39; /* Golden background on hover */
     transform: translateY(-5px) scale(1.03); /* Lifted effect */
     box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 40px -10px; /* Enhanced shadow */
@@ -411,6 +669,7 @@ h2, .projects-heading, .about-heading, .contact-heading ,.courses-heading,.blogs
 /* Blogs Section */
 #blogs {
     margin: 0px;
+    z-index: 0;
     padding: 50px 20px;
     background-color: #000; /* Pitch black background */
     text-align: center;
