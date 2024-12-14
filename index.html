@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
+    <script src="planet.js"></script>4
+    <script src="starry-background.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <!--For the scrool in animation-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    
+</head>
+<body>
+
+
+
+    <div class="starry-bg"></div>
+
+
+    <nav class="navbar">
+       
+           <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+        <ul class="nav-links">
+            <li> <div class="navbar-logo">
+                <i class="fa-solid fa-cat">Quantum</i> <!-- You can change this icon -->
+             </div></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Courses">Courses</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#Activity">Activity</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li> <div class="cool-icon">
+                <i class="fa-solid fa-atom"></i>
+                <span>Explore</span>
+            </div></li>
+        </ul>
+        <!-- Cool icon addition -->
+       
+    </nav>
+    
+    <section id="welcome">
+        <div class="welcome-container">
+            <div class="welcome-text">
+                <h1>Hello, I'm <span class="highlight">Aasharya</span></h1>
+                <p>
+                    A physics student at Tribhuvan University with a passion for <br>
+                    <strong>physics</strong>, <strong>biology</strong>,play with<br>
+                    <strong>computer science</strong> to explore these fields.
+                </p>
+            </div>
+            <div class="physics-animation">
+                <div class="particle orbit"></div>
+                <div class="particle orbit"></div>
+                <div class="particle orbit"></div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="about" >
+        <h2 class="about-heading" >About Me</h2>
+        <h1 class="background-text">ABOUT</h1>
+        <div class="about-container">
+            <!-- Image Section -->
+            <div class="about-image">
+                <img src="Asharya Picture.jpg" alt="Aasharya Bhandari">
+            </div>
+            <!-- Text Section -->
+            <div class="about-text" data-aos="fade-up">
+                <ul>
+                    <li class="tags"><span class="label">Name:</span> <span class="value">Aasharya Bhandari</span></li>
+                    <li class="tags"><span class="label">Date of Birth:</span> <span class="value">7 May 2004</span></li>
+                    <li class="tags"><span class="label">Address:</span> <span class="value">Balkumari, Kathmandu</span></li>
+                    <li class="tags"><span class="label">Email:</span> <span class="value">Bhandariaasharya@gmail.com</span></li>
+                    <li class="tags"><span class="label">Phone:</span> <span class="value">+977 9843221804</span></li>
+                </ul>
+                <p class="quote">"Biology, I judged you too quickly."</p>
+                <div class="text" data-aos="fade-up">
+                    <p class="cv">
+                        <span class="number" id="projects-completed">0</span>
+                        <span>Projects completed</span>
+                    </p>
+                    <p><a href="aasharya(cv).pdf" class="cv-link">Download CV</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+      
+
+
+
+
+
+
+    <section id="projects">
+        <h2 class="projects-heading" data-aos="fade-up">My Projects</h2>
+        <h1 class="background-text" data-aos="fade-up" >PROJECTS</h1>
+        <div class="projects-grid" data-aos="fade-up">
+            <div class="project-box">
+                <a href="cell-proliferation.html" target="_blank">
+                    <img src="cell_ploriferation.png" alt="Cell Proliferation Simulation">
+                    <p class="project-name">Cell Proliferation Simulation</p>
+                </a>
+            </div>
+            <div class="project-box">
+                <a href="rock-paper-scissors.html" target="_blank">
+                    <img src="rock_paper_scissor.png" alt="Rock Paper Scissors">
+                    <p class="project-name">Rock Paper Scissors</p>
+                </a>
+            </div>
+            <div class="project-box">
+                <a href="big-mart-analysis.html" target="_blank">
+                    <img src="Bigmart.png"Big Mart Data Analysis">
+                    <p class="project-name">Big Mart Data Analysis</p>
+                </a>
+            </div>
+            <div class="project-box">
+                <a href="big-mart-analysis.html" target="_blank">
+                    <img src="tumro.png" alt="Big Mart Data Analysis">
+                    <p class="project-name">Tumor Detection using MRI</p>
+                </a>
+            </div>
+            <div class="project-box">
+                <a href="big-mart-analysis.html" target="_blank">
+                    <img src="images/big-mart-analysis.jpg" alt="Big Mart Data Analysis">
+                    <p class="project-name">Ligthing Data analysis</p>
+                </a>
+            </div>
+            <div class="project-box">
+                <a href="big-mart-analysis.html" target="_blank">
+                    <img src="images/big-mart-analysis.jpg" alt="Big Mart Data Analysis">
+                    <p class="project-name">Quantum Cryptography</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="courses">
+        <h2 class="courses-heading" data-aos="fade-up" >Recent Courses</h2>
+        <h1 class="background-text" data-aos="fade-up">COURSES</h1>
+        <div class="courses-grid" data-aos="fade-up">
+            <div class="course-box">
+                <i class="fas fa-laptop-code"></i> <!-- Icon -->
+                  <br> Python for Data Science
+            </div>
+            <div class="course-box">
+                <i class="fas fa-brain"></i> <!-- Icon -->
+                  Introduction to Deep Learning
+            </div>
+            <div class="course-box">
+                <i class="fas fa-microscope"></i> <!-- Icon -->
+                  Medical Imaging Analysis
+            </div>
+            <div class="course-box">
+                <i class="fas fa-dna"></i> <!-- Icon -->
+                  Stochastic Processes in Biophysics
+            </div>
+            <div class="course-box">
+                <i class="fas fa-laptop-code"></i> <!-- Icon -->
+                  Python for Data Science
+            </div>
+            <div class="course-box">
+                <i class="fas fa-brain"></i> <!-- Icon -->
+                  Introduction to Deep Learning
+            </div>
+            <div class="course-box">
+                <i class="fas fa-microscope"></i> <!-- Icon -->
+                  Medical Imaging Analysis
+            </div>
+            <div class="course-box">
+                <i class="fas fa-dna"></i> <!-- Icon -->
+                  Stochastic Processes in Biophysics
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="blogs">
+    <h2 class="blogs-heading" data-aos="fade-up">Blogs</h2>
+    <h1 class="background-text" data-aos="fade-up" >My Blog</h1>
+    <div class="blogs-grid" data-aos="fade-up">
+        <div class="blog-box">
+            <a href="https://example.com/blog1" target="_blank">
+                <img src="Cancer_migration.jpg" alt="Blog 1">
+            </a>
+            <p class="blog-date">Dec 15, 2024</p>
+            <h3 class="blog-title">Exploring Cell Proliferation</h3>
+            <p class="blog-description">An in-depth look at simulation techniques for studying cell growth.</p>
+        </div>
+        
+        <div class="blog-box">
+            <a href="https://example.com/blog1" target="_blank">
+                <img src="boy-running-rain-black-white-hand-drawn-vector-illustration_1057-171500.jpg" alt="Blog 1">
+            </a>
+            <p class="blog-date">Dec 10, 2024</p>
+            <h3 class="blog-title">Running in Rain</h3>
+            <p class="blog-description">Analysing with a thought experiment in an ideal world, what happens when I do run in rain..</p>
+        </div>
+        
+        <div class="blog-box">
+            <a href="https://example.com/blog1" target="_blank">
+                <img src="theorem.jpg" alt="Gershgorin">
+            </a>
+            <p class="blog-date">Jan 1, 2024</p>
+            <h3 class="blog-title">Stochastic Process:A preview</h3>
+            <p class="blog-description">Introducing simple concept of Stochastic process.</p>
+        </div>
+        
+    </div>
+</section>
+
+    
+
+
+    <section id="contact">
+        <h2 class ="contact-heading" data-aos="fade-up" >Contact</h2>
+        <h1 class="background-text" data-aos="fade-up" >CONTACT</h1>
+        <div class="contact-grid" data-aos="fade-up">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p class="contact-value">Bhandariaasharya@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <p class="contact-value">+977 9843221804</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p class="contact-value">Balkumar,Lalitpur,Nepal</p>
+            </div>
+        </div>
+    </section>
+    <footer class="bottom">
+        <p>© 2024 Aasharya Bhandari</p>
+    </footer>
+</body>
+
+</html>

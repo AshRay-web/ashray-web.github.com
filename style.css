@@ -1,0 +1,810 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #000000;
+    overflow: auto;
+}
+
+.starry-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 0; /* Place it behind everything */
+
+
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8); /* White stars with slight transparency */
+    border-radius: 50%;
+    animation: twinkle 5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+header {
+    background:#000000;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+    background: #030303;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #000000;
+}
+
+h2{
+    font-size: xx-large;
+    font-family: 'Poppins', sans-serif; ;
+    color: #ffffff;
+}
+
+
+/* Navigation Bar */
+.navbar {
+    background-color: #000; /* Black background */
+    padding: 10px 0; /* Vertical padding for spacing */
+    text-align: center; /* Center align the navigation */
+    position: sticky;
+    top: 0; /* Sticks to the top when scrolling */
+    display: flex;
+    justify-content:space-evenly; /* Align navigation to the right */
+    align-items: center;
+    padding-top: 15px;
+    background: black;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Align links to the left */
+    gap: 20px; /* Space between links */
+    padding-left: 20px; /* Add some padding on the left for alignment */
+}
+
+.nav-links li {
+    display: inline-block; /* Inline-block for spacing */
+    position: relative; /* Positioning for the underline */
+}
+
+.nav-links a {
+    font-family: 'Poppins', Arial, sans-serif; /* Match font */
+    font-size: 1rem; /* Slightly smaller text size */
+    color: #fff; /* Default white text */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.nav-links a:hover {
+    color: #ffbd39; /* Golden yellow on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Yellow underline effect */
+.nav-links a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #ffbd39; /* Yellow color */
+    transition: width 0.3s ease; /* Smooth transition for the underline */
+    position: absolute;
+    bottom: -5px; /* Place just under the text */
+    left: 0;
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+
+.navbar .nav-links .navbar-logo {
+    font-size: 1.5rem; /* Adjust size */
+    color: #ffbd39; /* Icon color */
+    margin-right: 150px; /* Adds space between icon and links */
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap:30px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffbd39;
+}
+
+/* Add a cool physics-inspired icon to the navigation */
+.cool-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.cool-icon i {
+    font-size: 1.5rem;
+    color: #ffbd39;
+    animation: spin 2s linear infinite;
+}
+
+.cool-icon:hover i {
+    animation: none;
+    color: #cfcfcf;
+}
+
+.cool-icon span {
+    font-family: 'Poppins', sans-serif;
+    color: #cfcfcf;
+    font-size: 1rem;
+}
+
+/* Spinning Animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Welcome Section */
+#welcome {
+    height: 700px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: black; /* Matches the overall black theme */
+    color: #fff;
+    position: relative;
+    z-index: -1;
+
+}
+
+.welcome-container {
+    width: 80%;
+    padding-top: 20px;
+    position: relative;
+    z-index: 3; /* Ensures it's above the stars */
+}
+
+.welcome-text h1 {
+    font-size: 3rem;
+    margin: 0 0 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffbd39; /* Golden yellow highlight */
+    text-shadow: 0 0 15px rgba(255, 189, 57, 0.7);
+    animation: fadeInDown 2s ease-out;
+}
+
+.welcome-text p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #cfcfcf;
+    line-height: 2;
+    animation: fadeInUp 2s ease-out;
+}
+
+.welcome-text .highlight {
+    color: #ffbd39;
+    font-weight: bold;
+}
+
+.physics-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+}
+
+.particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #ffbd39;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbit 4s linear infinite;
+}
+
+.particle:nth-child(1) {
+    width: 5px;
+    height: 5px;
+    animation-duration: 3s;
+}
+
+.particle:nth-child(2) {
+    width: 7px;
+    height: 7px;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+.particle:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
+
+#about {
+    z-index: 0;
+    position: relative;
+    align-content: center;
+    margin: 0px;
+    padding: 50px 20px;
+    background: #000000;
+    text-align: center;
+    
+}
+
+
+.about-heading {
+    font-size: 4vw;
+    margin-bottom: 30px;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #ffbd39; /* Golden heading color */
+}
+
+.about-container {
+    display: flex;
+    align-items: center; /* Vertically center align */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1100px; /* Increase overall container width */
+    margin: 0 auto;
+}
+
+.about-image img {
+    margin-left: 50px;
+    width: 300px; /* Bigger image size */
+    height: 400px;
+    border-radius: 0px; /* Add slight rounding */
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 10px; /* Add shadow */
+}
+
+.about-text {
+    flex: 1; /* Take equal width */
+    padding-left: 20px;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.about-text ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+.about-text ul li {
+    margin: 30px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-text .label {
+    color: #ffffff; /* White for labels */
+    font-weight: bold;
+}
+
+.about-text .value {
+    color: #808080; /* Grayish color for values */
+    font-size: medium;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1rem;
+    margin: 20px 0;
+    color: #ffbd39; /* Golden for the quote */
+}
+
+.text {
+    margin-top: 20px;
+}
+
+.cv {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#projects-completed {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffbd39; /* Golden */
+}
+
+.cv-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ffbd39; /* Golden button */
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cv-link:hover {
+    background: #ffffff; /* White hover effect */
+    color: #000;
+    transform: scale(1.1);
+}
+
+
+/* Project Section */
+#projects {
+    margin: 0px;
+    position: relative;
+    background-color: #000; /* Background for the entire project section */
+    padding: 50px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.projects-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #ffbd39; /* Golden heading color */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive layout */
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Full width within grid */
+    aspect-ratio: 4 / 3; /* Slightly rectangular shape */
+    background: rgba(255, 255, 255, 0.1); /* Placeholder background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Styling */
+.project-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fits the box */
+    z-index: 1;
+    transition: transform 0.3s ease; /* Zoom effect */
+}
+
+.project-box:hover img {
+    transform: scale(1); /* if you want to zoom in */
+}
+
+/* Yellow Faint Overlay */
+.project-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 145, 0, 0.8); /* 80% opacity yellow */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+    z-index: 2; /* Above the image but below text */
+}
+
+.project-box:hover::before {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Project Name Text */
+.project-box .project-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center text */
+    color: #fff; /* White text */
+    font-size: 1rem; /* Small text size */
+    font-weight: normal; /* Non-bold text */
+    font-family: 'Poppins', Arial, sans-serif;
+    text-align: center;
+    z-index: 3; /* Above overlay and image */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+.project-box:hover .project-name {
+    opacity: 1; /* Fade in text on hover */
+}
+
+
+
+/* Recent Courses Section */
+#courses {
+    margin: 0px;
+    background-color: #000; /* Pitch black background */
+    padding: 50px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.courses-heading {
+    font-size: 4vw;
+    margin-bottom: 30px;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #ffbd39; /* Golden heading color */
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Reduce space between boxes */
+    justify-content: center;
+    max-width: 1000px; /* Limit the total width of the grid */
+    margin: 0 auto; /* Center the grid container */
+}
+
+.course-box {
+    box-sizing: border-box;
+    position: static;
+    z-index: 10;
+    width: 100%; /* Full width within the grid column */
+    max-width: 300px; /* Adjusted for squarish shape */
+    height: 300px; /* Make it squarish */
+    margin: 0 auto; /* Center box horizontally */
+    padding: 1.5em; /* Adjusted padding for balance */
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 0.9rem; /* Slightly smaller text */
+    font-weight: 400;
+    color: #ffbd39; /* Golden text color */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px 10px 30px -15px; /* Subtle shadow */
+
+    text-decoration: none;
+    outline: none;
+    cursor: pointer; /* Make it interactive */
+    pointer-events: auto;
+
+    display: flex;
+    flex-direction: column; /* Arrange children (icon and text) vertically */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: relative; /* For positioning hover effects */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.course-box:hover {
+    color: #ffffff; /* Change text to black */
+    background: #ffbd39 /* Golden background on hover */
+    transform: translateY(-5px) scale(1.03); /* Lifted effect */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 40px -10px; /* Enhanced shadow */
+}
+
+/* Icon Styling */
+.course-box i {
+    font-size: 2.5rem; /* Icon size */
+    color: #ffbd39; /* Golden icon color */
+    margin-bottom: 10px; /* Space between icon and text */
+    transition: transform ease 0.4, color 0.4 ease; /* Smooth animation */
+}
+.course-box:hover i {
+    font-size: 2.5rem; /* Icon size */
+    color: #ffffff; /* Golden icon color */
+    margin-bottom: 10px; /* Space between icon and text */
+    transition: transform 0.4 ease, color 0.4 ease; /* Smooth animation */
+}
+
+
+
+
+
+/*This is for the better looking background texts*/
+
+
+/* Background Text Styling */
+/* General Background Text Styling */
+.background-text {
+    margin-top: 0px;
+    margin-bottom: 8px;
+    position: relative;
+    padding: 0;
+    font-size: 5vw; /* Adjust this to control the text size */
+    letter-spacing: 5px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    font-family: 'Poppins';
+    font-weight: 1000;
+    color: rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+    line-height: 91.55px;
+    pointer-events: none; /* Prevent interaction with the background text */
+    z-index: 0;/* Behind content */
+    top: 0; /* Keep at the top, right behind the heading */
+    transform: scaleX(1.5); 
+    transform: translateX(-50%); /* Center horizontally */
+    text-align: center;
+}
+
+#about .background-text{
+    left: 50%;
+}
+
+
+/* Ensure the heading stays in front of the background text */
+h2, .projects-heading, .about-heading, .contact-heading ,.courses-heading,.blogs-heading{
+    line-height: 0px;
+    position: relative;
+    font-weight: 800;
+    font-size: 4vw;
+    margin: 0px;
+    padding: 0px;
+    z-index: 2; /* Bring the heading above the background text */
+    color: rgb(255, 255, 255); /* Keep the heading text color white or according to your theme */
+}
+
+
+
+/* Blogs Section */
+#blogs {
+    margin: 0px;
+    z-index: 0;
+    padding: 50px 20px;
+    background-color: #000; /* Pitch black background */
+    text-align: center;
+    position: relative;
+}
+
+
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with three columns */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: auto;
+
+}
+
+.blog-box {
+    position: relative;
+    
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Enforce rectangular shape */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.blog-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fits nicely */
+    transition: transform 0.3s ease;
+    display: block;
+}
+.blog-box{
+    padding: 15px;
+}
+
+
+/* Date and Blog Name Styling */
+.blog-date{
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #ffbd39;
+    font-size: 0.8rem;
+}
+.blog-title {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.blog-description {
+    margin: 5px 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 15px;
+    color: #ddd; /* Light gray for the description */
+    
+    line-height: 1;
+}
+.blog-date, .blog-title, .blog-description {
+    text-align: left;
+    position: relative;
+    z-index: 2; /* Above the image */
+}
+
+.blog-title:hover {
+    color: #ffbd39; /* Change blog title color on hover */
+}
+
+
+
+/* Contact Section */
+#contact {
+    margin: 0px;
+    background-color: #000; /* Match dark theme */
+    color: #fff; /* White text */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-heading {
+    z-index: 2;
+    font-size: 2rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.contact-grid {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.contact-item {
+    text-align: center;
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: #ffbd39; /* Golden accent to match theme */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-item i:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+.contact-value {
+    font-size: 1rem;
+    color: #ddd; /* Light gray */
+    margin: 0;
+}
+
+/* Footer Section */
+footer.bottom {
+    margin: 0px;
+    padding: 10px 0; /* Add some vertical padding for spacing */
+    background-color: #000; /* Match the black background */
+    color: #fff; /* White text color */
+    text-align: center; /* Center the text */
+    font-family: 'Poppins', Arial, sans-serif; /* Match the font style */
+    font-size: 0.9rem; /* Slightly smaller text */
+    border-top: 1px solid #333; /* Optional subtle border for separation */
+}
+
+
